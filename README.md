@@ -71,6 +71,18 @@ I am a **Systems Engineer**, **Full-Stack Architect**, and **Applied AI Research
 
 ---
 
+### 🔬 Systems Architecture in Motion
+
+<p align="center">
+  <em>Self-drawing cryptographic data flow demonstrating the zero-knowledge client-side pipeline of CipherChat</em>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/architecture.svg" alt="Zero-Knowledge E2EE Architecture Pipeline" width="100%" />
+</p>
+
+---
+
 ### 🔥 Featured Flagship Innovations
 
 <table>
