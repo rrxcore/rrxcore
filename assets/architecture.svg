@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -46,14 +46,6 @@
       </feMerge>
     </filter>
 
-    <filter id="boxGlowCyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
     <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
@@ -78,16 +70,16 @@
     @keyframes packetHop1 {
       0% { transform: translateX(0px); opacity: 0; }
       15% { opacity: 1; }
-      45% { transform: translateX(90px); opacity: 1; }
-      55% { transform: translateX(90px); opacity: 0; }
-      100% { transform: translateX(90px); opacity: 0; }
+      45% { transform: translateX(65px); opacity: 1; }
+      55% { transform: translateX(65px); opacity: 0; }
+      100% { transform: translateX(65px); opacity: 0; }
     }
     @keyframes packetHop2 {
       0% { transform: translateX(0px); opacity: 0; }
       50% { transform: translateX(0px); opacity: 0; }
       60% { opacity: 1; }
-      90% { transform: translateX(90px); opacity: 1; }
-      100% { transform: translateX(90px); opacity: 0; }
+      90% { transform: translateX(65px); opacity: 1; }
+      100% { transform: translateX(65px); opacity: 0; }
     }
     @keyframes nodeActiveCyan {
       0%, 100% { stroke: #00f2fe; stroke-opacity: 0.35; }
@@ -142,12 +134,12 @@
   </style>
 
   <!-- ================= CANVAS BASE ================= -->
-  <rect width="1100" height="480" rx="16" fill="url(#archBg)"/>
-  <rect width="1100" height="480" rx="16" fill="url(#archGrid)"/>
-  <rect x="2" y="2" width="1096" height="476" rx="15" fill="none" stroke="#00f2fe" stroke-opacity="0.2" stroke-width="1.2"/>
+  <rect width="1200" height="520" rx="16" fill="url(#archBg)"/>
+  <rect width="1200" height="520" rx="16" fill="url(#archGrid)"/>
+  <rect x="2" y="2" width="1196" height="516" rx="15" fill="none" stroke="#00f2fe" stroke-opacity="0.2" stroke-width="1.2"/>
 
   <!-- ================= TOP CONSOLE HEADER ================= -->
-  <g transform="translate(35, 30)">
+  <g transform="translate(40, 32)">
     <!-- Traffic light controls -->
     <circle cx="0" cy="0" r="4.5" fill="#ef4444" fill-opacity="0.85"/>
     <circle cx="14" cy="0" r="4.5" fill="#eab308" fill-opacity="0.85"/>
@@ -158,25 +150,25 @@
     </text>
     
     <!-- Live Status Pill on Right -->
-    <g transform="translate(860, -11)">
-      <rect x="0" y="0" width="165" height="24" rx="12" fill="#061224" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
+    <g transform="translate(945, -11)">
+      <rect x="0" y="0" width="175" height="24" rx="12" fill="#061224" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
       <circle cx="14" cy="12" r="4" fill="#00ff88" class="beacon" filter="url(#softGlow)"/>
       <text x="26" y="16" fill="#38bdf8" font-size="10" font-weight="700" class="mono">LIVE PACKET STREAM</text>
     </g>
   </g>
 
-  <line x1="35" y1="46" x2="1065" y2="46" stroke="#00f2fe" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="40" y1="50" x2="1160" y2="50" stroke="#00f2fe" stroke-opacity="0.15" stroke-width="1"/>
 
   <!-- ================= HIGHWAY DATA CONDUITS ================= -->
-  <!-- Conduit 1: Sender ➔ Server (Between x=320 and x=410, center at y=210) -->
-  <g transform="translate(320, 215)">
+  <!-- Conduit 1: Sender ➔ Server (Between x=370 and x=435, center at y=235) -->
+  <g transform="translate(370, 235)">
     <!-- Conduit backing pipe -->
-    <line x1="0" y1="0" x2="90" y2="0" stroke="#0b172e" stroke-width="8" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="65" y2="0" stroke="#0b172e" stroke-width="8" stroke-linecap="round"/>
     <!-- Animated Glowing Flow Wire -->
-    <line x1="0" y1="0" x2="90" y2="0" stroke="url(#wireCyan)" stroke-width="3" class="flow-wire" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="65" y2="0" stroke="url(#wireCyan)" stroke-width="3" class="flow-wire" stroke-linecap="round"/>
     
     <!-- Conduit Label Badge (Above the wire) -->
-    <g transform="translate(45, -20)">
+    <g transform="translate(32, -22)">
       <rect x="-42" y="-10" width="84" height="20" rx="5" fill="#040b18" stroke="#00f2fe" stroke-opacity="0.5" stroke-width="1"/>
       <text x="0" y="4" text-anchor="middle" fill="#67e8f9" font-size="9" font-weight="700" class="mono">AES-256-GCM</text>
     </g>
@@ -188,15 +180,15 @@
     </g>
   </g>
 
-  <!-- Conduit 2: Server ➔ Receiver (Between x=690 and x=780, center at y=210) -->
-  <g transform="translate(690, 215)">
+  <!-- Conduit 2: Server ➔ Receiver (Between x=765 and x=830, center at y=235) -->
+  <g transform="translate(765, 235)">
     <!-- Conduit backing pipe -->
-    <line x1="0" y1="0" x2="90" y2="0" stroke="#160c2b" stroke-width="8" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="65" y2="0" stroke="#160c2b" stroke-width="8" stroke-linecap="round"/>
     <!-- Animated Glowing Flow Wire -->
-    <line x1="0" y1="0" x2="90" y2="0" stroke="url(#wirePurple)" stroke-width="3" class="flow-wire" stroke-linecap="round"/>
+    <line x1="0" y1="0" x2="65" y2="0" stroke="url(#wirePurple)" stroke-width="3" class="flow-wire" stroke-linecap="round"/>
     
     <!-- Conduit Label Badge (Above the wire) -->
-    <g transform="translate(45, -20)">
+    <g transform="translate(32, -22)">
       <rect x="-42" y="-10" width="84" height="20" rx="5" fill="#0c071d" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1"/>
       <text x="0" y="4" text-anchor="middle" fill="#c084fc" font-size="9" font-weight="700" class="mono">BLIND RELAY</text>
     </g>
@@ -209,146 +201,146 @@
   </g>
 
   <!-- ================= NODE 1: SENDER CLIENT ================= -->
-  <g transform="translate(40, 75)">
-    <!-- Main Card Frame (Spacious 280 x 295) -->
-    <rect x="0" y="0" width="280" height="295" rx="12" fill="url(#senderGrad)" stroke="#00f2fe" stroke-width="1.4" class="box-sender" filter="url(#softGlow)"/>
+  <g transform="translate(40, 72)">
+    <!-- Main Card Frame (Spacious 330 x 335) -->
+    <rect x="0" y="0" width="330" height="335" rx="12" fill="url(#senderGrad)" stroke="#00f2fe" stroke-width="1.4" class="box-sender" filter="url(#softGlow)"/>
     
     <!-- Card Header -->
-    <rect x="0" y="0" width="280" height="42" rx="12" fill="#091b36"/>
+    <rect x="0" y="0" width="330" height="42" rx="12" fill="#091b36"/>
     <circle cx="20" cy="21" r="5" fill="#00f2fe" filter="url(#softGlow)"/>
-    <text x="34" y="26" fill="#ffffff" font-size="13" font-weight="800" class="sans" letter-spacing="1">1. SENDER CLIENT</text>
-    <rect x="205" y="10" width="65" height="22" rx="11" fill="#030b18" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="237" y="24" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="700" class="mono">BROWSER</text>
+    <text x="34" y="26" fill="#ffffff" font-size="12.5" font-weight="800" class="sans" letter-spacing="1">1. SENDER CLIENT</text>
+    <rect x="245" y="10" width="72" height="22" rx="11" fill="#030b18" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="281" y="24" text-anchor="middle" fill="#38bdf8" font-size="9" font-weight="700" class="mono">BROWSER</text>
 
     <!-- Step 1.1: Key Generation -->
-    <g transform="translate(14, 56)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#050e1f" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
+    <g transform="translate(14, 54)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#050e1f" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="24" fill="#38bdf8" font-size="12" font-weight="800" class="mono">🔑 ECDH P-256 Keypair</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Generated in-browser (SubtleCrypto)</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">Curve: P-256 (secp256r1)</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Generated in-browser via SubtleCrypto</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">Curve: P-256 (secp256r1 NIST standard)</text>
     </g>
 
     <!-- Step 1.2: Session Key Derivation -->
-    <g transform="translate(14, 134)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#050e1f" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
+    <g transform="translate(14, 144)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#050e1f" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="24" fill="#38bdf8" font-size="12" font-weight="800" class="mono">⚡ HKDF-SHA256 Derivation</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Diffie-Hellman Shared Secret Derived</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">Key Length: 256-bit Symmetric</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Diffie-Hellman Shared Secret Derived</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">Key Length: 256-bit Symmetric Cipher</text>
     </g>
 
     <!-- Step 1.3: Authenticated Encryption -->
-    <g transform="translate(14, 212)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#05151e" stroke="#00ff88" stroke-opacity="0.4" stroke-width="1"/>
+    <g transform="translate(14, 234)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#05151e" stroke="#00ff88" stroke-opacity="0.4" stroke-width="1"/>
       <text x="14" y="24" fill="#00ff88" font-size="12" font-weight="800" class="mono">🔒 AES-256-GCM Cipher</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Authenticated payload ciphertext</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">IV: Unique 96-bit random per frame</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Authenticated payload ciphertext stream</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">IV: Unique 96-bit random nonce per frame</text>
     </g>
   </g>
 
   <!-- ================= NODE 2: BLIND RELAY SERVER ================= -->
-  <g transform="translate(410, 75)">
-    <!-- Main Card Frame (Spacious 280 x 295) -->
-    <rect x="0" y="0" width="280" height="295" rx="12" fill="url(#serverGrad)" stroke="#8b5cf6" stroke-width="1.4" class="box-server" filter="url(#softGlow)"/>
+  <g transform="translate(435, 72)">
+    <!-- Main Card Frame (Spacious 330 x 335) -->
+    <rect x="0" y="0" width="330" height="335" rx="12" fill="url(#serverGrad)" stroke="#8b5cf6" stroke-width="1.4" class="box-server" filter="url(#softGlow)"/>
     
-    <!-- Card Header -->
-    <rect x="0" y="0" width="280" height="42" rx="12" fill="#1d1136"/>
+    <!-- Card Header (Spacious 330 width, title and badge have 40px clear space) -->
+    <rect x="0" y="0" width="330" height="42" rx="12" fill="#1d1136"/>
     <circle cx="20" cy="21" r="5" fill="#a855f7" filter="url(#softGlow)"/>
-    <text x="34" y="26" fill="#ffffff" font-size="13" font-weight="800" class="sans" letter-spacing="1">2. BLIND RELAY SERVER</text>
-    <rect x="195" y="10" width="75" height="22" rx="11" fill="#090517" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="232" y="24" text-anchor="middle" fill="#c084fc" font-size="9.5" font-weight="700" class="mono">ZERO-TRUST</text>
+    <text x="34" y="26" fill="#ffffff" font-size="12.5" font-weight="800" class="sans" letter-spacing="1">2. BLIND RELAY SERVER</text>
+    <rect x="235" y="10" width="82" height="22" rx="11" fill="#090517" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="276" y="24" text-anchor="middle" fill="#c084fc" font-size="9" font-weight="700" class="mono">ZERO-TRUST</text>
 
     <!-- Step 2.1: Dumb Packet Ingestion -->
-    <g transform="translate(14, 56)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#0f071f" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
+    <g transform="translate(14, 54)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#0f071f" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="24" fill="#c084fc" font-size="12" font-weight="800" class="mono">📡 Dumb Packet Relay</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Blind network socket routing only</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">Transport: Base64 Wire Bytes</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Blind network socket routing only</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">Transport: Base64 Wire Bytes</text>
     </g>
 
     <!-- Step 2.2: Zero Plaintext Guarantee -->
-    <g transform="translate(14, 134)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#1a0a14" stroke="#f87171" stroke-opacity="0.45" stroke-width="1"/>
+    <g transform="translate(14, 144)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#1a0a14" stroke="#f87171" stroke-opacity="0.45" stroke-width="1"/>
       <text x="14" y="24" fill="#f87171" font-size="12" font-weight="800" class="mono">🚫 Zero Plaintext / Zero Keys</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Server cannot mathematically decrypt</text>
-      <text x="14" y="58" fill="#f87171" font-size="9.5" font-weight="600" class="mono">Zero data stored on disk</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Server cannot mathematically decrypt</text>
+      <text x="14" y="67" fill="#f87171" font-size="9.5" font-weight="700" class="mono">Zero data stored on disk</text>
     </g>
 
     <!-- Step 2.3: Sub-ms Wire Dispatch -->
-    <g transform="translate(14, 212)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#0f071f" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
+    <g transform="translate(14, 234)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#0f071f" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="24" fill="#38bdf8" font-size="12" font-weight="800" class="mono">⚡ Sub-ms Wire Dispatch</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Broadcast to authorized room peers</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">Latency overhead: &lt;5ms</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Broadcast to authorized room peers</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">Latency overhead: &lt;5ms</text>
     </g>
   </g>
 
   <!-- ================= NODE 3: RECEIVER CLIENT ================= -->
-  <g transform="translate(780, 75)">
-    <!-- Main Card Frame (Spacious 280 x 295) -->
-    <rect x="0" y="0" width="280" height="295" rx="12" fill="url(#receiverGrad)" stroke="#34d399" stroke-width="1.4" class="box-receiver" filter="url(#softGlow)"/>
+  <g transform="translate(830, 72)">
+    <!-- Main Card Frame (Spacious 330 x 335) -->
+    <rect x="0" y="0" width="330" height="335" rx="12" fill="url(#receiverGrad)" stroke="#34d399" stroke-width="1.4" class="box-receiver" filter="url(#softGlow)"/>
     
     <!-- Card Header -->
-    <rect x="0" y="0" width="280" height="42" rx="12" fill="#09261c"/>
+    <rect x="0" y="0" width="330" height="42" rx="12" fill="#09261c"/>
     <circle cx="20" cy="21" r="5" fill="#34d399" filter="url(#softGlow)"/>
-    <text x="34" y="26" fill="#ffffff" font-size="13" font-weight="800" class="sans" letter-spacing="1">3. RECEIVER CLIENT</text>
-    <rect x="195" y="10" width="75" height="22" rx="11" fill="#02120b" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="232" y="24" text-anchor="middle" fill="#34d399" font-size="9.5" font-weight="700" class="mono">VERIFIED</text>
+    <text x="34" y="26" fill="#ffffff" font-size="12.5" font-weight="800" class="sans" letter-spacing="1">3. RECEIVER CLIENT</text>
+    <rect x="242" y="10" width="75" height="22" rx="11" fill="#02120b" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="279" y="24" text-anchor="middle" fill="#34d399" font-size="9" font-weight="700" class="mono">VERIFIED</text>
 
     <!-- Step 3.1: Session Key Agreement -->
-    <g transform="translate(14, 56)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#03140e" stroke="#34d399" stroke-opacity="0.3" stroke-width="1"/>
+    <g transform="translate(14, 54)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#03140e" stroke="#34d399" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="24" fill="#34d399" font-size="12" font-weight="800" class="mono">🔑 Peer Session Derivation</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Computed via peer's verified public key</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">No shared secret sent over wire</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Computed via peer's verified public key</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">No shared secret sent over wire</text>
     </g>
 
     <!-- Step 3.2: In-Memory AES Decryption -->
-    <g transform="translate(14, 134)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#03140e" stroke="#00ff88" stroke-opacity="0.4" stroke-width="1"/>
+    <g transform="translate(14, 144)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#03140e" stroke="#00ff88" stroke-opacity="0.4" stroke-width="1"/>
       <text x="14" y="24" fill="#00ff88" font-size="12" font-weight="800" class="mono">🔓 In-Memory Decryption</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Plaintext rendered strictly to client DOM</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">Zero disk cache / Zero persistence</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Plaintext rendered strictly to client DOM</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">Zero disk cache / Zero persistence</text>
     </g>
 
     <!-- Step 3.3: MITM Safety Fingerprint -->
-    <g transform="translate(14, 212)">
-      <rect x="0" y="0" width="252" height="66" rx="8" fill="#03140e" stroke="#34d399" stroke-opacity="0.3" stroke-width="1"/>
+    <g transform="translate(14, 234)">
+      <rect x="0" y="0" width="302" height="80" rx="8" fill="#03140e" stroke="#34d399" stroke-opacity="0.3" stroke-width="1"/>
       <text x="14" y="24" fill="#67e8f9" font-size="12" font-weight="800" class="mono">🛡️ 60-Digit SHA-256 Safety</text>
-      <text x="14" y="44" fill="#94a3b8" font-size="10.5" class="sans">Deterministic mutual public key fingerprint</text>
-      <text x="14" y="58" fill="#64748b" font-size="9.5" class="mono">MITM tampering detected instantly</text>
+      <text x="14" y="47" fill="#94a3b8" font-size="10.5" class="sans">Deterministic mutual public key fingerprint</text>
+      <text x="14" y="67" fill="#64748b" font-size="9.5" class="mono">MITM tampering detected instantly</text>
     </g>
   </g>
 
   <!-- ================= BOTTOM TELEMETRY SPECIFICATIONS BAR ================= -->
-  <g transform="translate(40, 395)">
-    <rect x="0" y="0" width="1020" height="54" rx="10" fill="#060c18" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
+  <g transform="translate(40, 430)">
+    <rect x="0" y="0" width="1120" height="56" rx="10" fill="#060c18" stroke="#00f2fe" stroke-opacity="0.3" stroke-width="1"/>
 
     <!-- Spec 1: Cryptography -->
-    <g transform="translate(35, 33)">
+    <g transform="translate(45, 34)">
       <circle cx="0" cy="-6" r="3.5" fill="#00ff88"/>
       <text x="12" y="-12" fill="#64748b" font-size="9" font-weight="700" class="mono">STANDARD</text>
-      <text x="12" y="3" fill="#ffffff" font-size="12" font-weight="800" class="mono">W3C WebCrypto API</text>
+      <text x="12" y="4" fill="#ffffff" font-size="12" font-weight="800" class="mono">W3C WebCrypto API</text>
     </g>
 
     <!-- Spec 2: Payload Cipher -->
-    <g transform="translate(295, 33)">
+    <g transform="translate(330, 34)">
       <circle cx="0" cy="-6" r="3.5" fill="#00f2fe"/>
       <text x="12" y="-12" fill="#64748b" font-size="9" font-weight="700" class="mono">CIPHER</text>
-      <text x="12" y="3" fill="#ffffff" font-size="12" font-weight="800" class="mono">AES-256-GCM + IV</text>
+      <text x="12" y="4" fill="#ffffff" font-size="12" font-weight="800" class="mono">AES-256-GCM + IV</text>
     </g>
 
     <!-- Spec 3: Key Derivation -->
-    <g transform="translate(555, 33)">
+    <g transform="translate(615, 34)">
       <circle cx="0" cy="-6" r="3.5" fill="#8b5cf6"/>
       <text x="12" y="-12" fill="#64748b" font-size="9" font-weight="700" class="mono">KEY EXCHANGE</text>
-      <text x="12" y="3" fill="#ffffff" font-size="12" font-weight="800" class="mono">ECDH P-256 / HKDF</text>
+      <text x="12" y="4" fill="#ffffff" font-size="12" font-weight="800" class="mono">ECDH P-256 / HKDF</text>
     </g>
 
     <!-- Spec 4: Data Retention -->
-    <g transform="translate(815, 33)">
+    <g transform="translate(900, 34)">
       <circle cx="0" cy="-6" r="3.5" fill="#34d399"/>
       <text x="12" y="-12" fill="#64748b" font-size="9" font-weight="700" class="mono">DATA RETENTION</text>
-      <text x="12" y="3" fill="#34d399" font-size="12" font-weight="800" class="mono">0 KB (Zero-Server)</text>
+      <text x="12" y="4" fill="#34d399" font-size="12" font-weight="800" class="mono">0 KB (Zero-Server)</text>
     </g>
   </g>
 </svg>
