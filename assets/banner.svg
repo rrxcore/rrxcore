@@ -1,67 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
   <defs>
-    <!-- Background Gradient -->
+    <!-- Background Space-Obsidian Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#04060a"/>
-      <stop offset="35%" stop-color="#070c18"/>
-      <stop offset="70%" stop-color="#0a1226"/>
-      <stop offset="100%" stop-color="#030508"/>
+      <stop offset="0%" stop-color="#030509"/>
+      <stop offset="30%" stop-color="#060c18"/>
+      <stop offset="70%" stop-color="#081022"/>
+      <stop offset="100%" stop-color="#020408"/>
     </linearGradient>
 
-    <!-- Mountain Gradient Layers -->
-    <linearGradient id="mountainBack" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#14223d" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#060b17" stop-opacity="0.9"/>
-    </linearGradient>
-
-    <linearGradient id="mountainMid" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0c172a"/>
-      <stop offset="100%" stop-color="#040711"/>
-    </linearGradient>
-
-    <linearGradient id="mountainFront" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#080e1a"/>
-      <stop offset="100%" stop-color="#020306"/>
-    </linearGradient>
-
-    <!-- Glowing Cyan Accents -->
-    <linearGradient id="cyanGlowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Electric Cyan Gradient -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00f2fe"/>
       <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+
+    <!-- Signature Core Gradient -->
+    <linearGradient id="signatureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#d1f7ff"/>
       <stop offset="100%" stop-color="#00f2fe"/>
     </linearGradient>
 
-    <!-- Desk / Table Gradient -->
-    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e1814"/>
-      <stop offset="25%" stop-color="#120e0b"/>
-      <stop offset="100%" stop-color="#060504"/>
+    <!-- Violet/Blue Accent Gradient -->
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <!-- Audio FFT Bar Gradient -->
+    <linearGradient id="fftGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0c2340"/>
+      <stop offset="50%" stop-color="#00f2fe"/>
+      <stop offset="90%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ffffff"/>
     </linearGradient>
 
     <!-- Neon Glow Filter -->
-    <filter id="neonCyan" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <filter id="neonCyanGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feGaussianBlur stdDeviation="14" result="blur2"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
     <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="lampGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="40" result="blur"/>
+    <filter id="ambientLight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="50" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f2fe" stroke-width="0.7" stroke-opacity="0.04"/>
+      <circle cx="0" cy="0" r="1" fill="#00f2fe" fill-opacity="0.15"/>
+    </pattern>
   </defs>
 
   <style>
@@ -78,335 +84,316 @@
     .sans {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif;
     }
-    .script {
-      font-family: 'Caveat', 'Dancing Script', 'Brush Script MT', 'Segoe Script', 'Apple Chancery', cursive, sans-serif;
+    .signature {
+      font-family: 'Caveat', 'Dancing Script', 'Brush Script MT', 'Segoe Script', 'Great Vibes', 'Allura', cursive, sans-serif;
+    }
+    .script-text {
+      font-family: 'Caveat', 'Dancing Script', 'Brush Script MT', 'Segoe Script', cursive, sans-serif;
     }
   </style>
 
-  <!-- ================= BACKGROUND & MESH ================= -->
-  <rect width="1200" height="400" fill="url(#bgGrad)" rx="14"/>
+  <!-- ================= BASE CANVAS ================= -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" rx="16"/>
+  <rect width="1200" height="400" fill="url(#cyberGrid)" rx="16"/>
 
-  <!-- Atmospheric Glow Pools -->
-  <!-- Cyan Ambient Behind Signature -->
-  <circle cx="430" cy="130" r="140" fill="#00f2fe" fill-opacity="0.08" filter="url(#lampGlow)"/>
-  <!-- Warm Amber Glow on Right (Studio Lamp effect) -->
-  <circle cx="1080" cy="180" r="130" fill="#f59e0b" fill-opacity="0.07" filter="url(#lampGlow)"/>
-  <!-- Indigo Center Backlight -->
-  <circle cx="750" cy="90" r="180" fill="#3b82f6" fill-opacity="0.06" filter="url(#lampGlow)"/>
+  <!-- Glowing Outer Neon Border -->
+  <rect x="2" y="2" width="1196" height="396" rx="15" fill="none" stroke="#00f2fe" stroke-opacity="0.25" stroke-width="1.2"/>
 
-  <!-- ================= MOUNTAIN SILHOUETTES (LEFT & CENTER) ================= -->
-  <!-- Back Mountain Range -->
-  <path d="M 0 320 Q 80 250 170 270 T 360 230 T 540 260 T 720 280 L 720 400 L 0 400 Z" fill="url(#mountainBack)"/>
-  <!-- Mid Mountain Range -->
-  <path d="M 0 340 Q 110 280 220 300 T 420 270 T 620 310 L 620 400 L 0 400 Z" fill="url(#mountainMid)"/>
-  <!-- Front Foothills -->
-  <path d="M 0 365 Q 130 330 260 345 T 480 340 L 480 400 L 0 400 Z" fill="url(#mountainFront)"/>
+  <!-- Ambient Glow Pods -->
+  <circle cx="410" cy="140" r="160" fill="#00f2fe" fill-opacity="0.08" filter="url(#ambientLight)"/>
+  <circle cx="880" cy="220" r="180" fill="#3b82f6" fill-opacity="0.07" filter="url(#ambientLight)"/>
+  <circle cx="1060" cy="110" r="130" fill="#8b5cf6" fill-opacity="0.06" filter="url(#ambientLight)"/>
 
-  <!-- Ambient Blue Mountain Fog -->
-  <ellipse cx="220" cy="350" rx="200" ry="25" fill="#38bdf8" fill-opacity="0.05" filter="url(#lampGlow)"/>
-
-  <!-- Starry Particle Dust in Sky -->
-  <circle cx="85" cy="50" r="1" fill="#ffffff" fill-opacity="0.6"/>
-  <circle cx="160" cy="80" r="1.5" fill="#38bdf8" fill-opacity="0.7"/>
-  <circle cx="280" cy="40" r="1" fill="#ffffff" fill-opacity="0.5"/>
-  <circle cx="340" cy="75" r="1" fill="#00f2fe" fill-opacity="0.6"/>
-  <circle cx="490" cy="35" r="1.5" fill="#ffffff" fill-opacity="0.8"/>
-  <circle cx="610" cy="65" r="1" fill="#38bdf8" fill-opacity="0.6"/>
-  <circle cx="720" cy="30" r="1" fill="#ffffff" fill-opacity="0.5"/>
-  <circle cx="860" cy="55" r="1.5" fill="#38bdf8" fill-opacity="0.7"/>
+  <!-- Starry / Cyber Sparkles -->
+  <circle cx="140" cy="45" r="1" fill="#ffffff" fill-opacity="0.7"/>
+  <circle cx="280" cy="70" r="1.5" fill="#38bdf8" fill-opacity="0.8"/>
+  <circle cx="520" cy="35" r="1" fill="#ffffff" fill-opacity="0.6"/>
+  <circle cx="680" cy="80" r="1.5" fill="#00f2fe" fill-opacity="0.7"/>
+  <circle cx="890" cy="40" r="1" fill="#ffffff" fill-opacity="0.5"/>
+  <circle cx="1050" cy="65" r="1.5" fill="#38bdf8" fill-opacity="0.7"/>
 
   <!-- ================= TOP MOTTO HEADER ================= -->
-  <g transform="translate(480, 28)">
-    <text x="0" y="0" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" class="mono" letter-spacing="4">
-      BUILD <tspan fill="#38bdf8">|</tspan> LEARN <tspan fill="#38bdf8">|</tspan> IMPROVE <tspan fill="#38bdf8">|</tspan> REPEAT
+  <g transform="translate(480, 26)">
+    <text x="0" y="0" text-anchor="middle" fill="#94a3b8" stroke="#030712" stroke-width="1.5" paint-order="stroke fill" font-size="11" font-weight="700" class="mono" letter-spacing="4">
+      BUILD <tspan fill="#38bdf8">|</tspan> OPTIMIZE <tspan fill="#38bdf8">|</tspan> INNOVATE <tspan fill="#38bdf8">|</tspan> SCALE
     </text>
   </g>
 
-  <!-- ================= LEFT: TERMINAL WINDOW ================= -->
-  <g transform="translate(35, 25)">
-    <!-- Terminal Box Frame with glowing cyan border -->
-    <rect x="0" y="0" width="195" height="135" rx="8" fill="#060c18" fill-opacity="0.85" stroke="#00f2fe" stroke-opacity="0.6" stroke-width="1.2" filter="url(#subtleGlow)"/>
+  <!-- ================= LEFT: WHOAMI TERMINAL WINDOW ================= -->
+  <g transform="translate(35, 24)">
+    <!-- Terminal Outer Frame with Highlighted Stroke -->
+    <rect x="0" y="0" width="195" height="138" rx="8" fill="#050a16" fill-opacity="0.9" stroke="#00f2fe" stroke-opacity="0.7" stroke-width="1.3" filter="url(#subtleGlow)"/>
     
-    <!-- Terminal Header Dots -->
-    <circle cx="14" cy="14" r="3.5" fill="#ef4444" fill-opacity="0.8"/>
-    <circle cx="25" cy="14" r="3.5" fill="#eab308" fill-opacity="0.8"/>
-    <circle cx="36" cy="14" r="3.5" fill="#22c55e" fill-opacity="0.8"/>
-    <line x1="0" y1="24" x2="195" y2="24" stroke="#00f2fe" stroke-opacity="0.2" stroke-width="1"/>
+    <!-- Window Control Buttons -->
+    <circle cx="14" cy="14" r="3.5" fill="#ef4444" stroke="#7f1d1d" stroke-width="0.8"/>
+    <circle cx="25" cy="14" r="3.5" fill="#eab308" stroke="#713f12" stroke-width="0.8"/>
+    <circle cx="36" cy="14" r="3.5" fill="#22c55e" stroke="#14532d" stroke-width="0.8"/>
+    <line x1="0" y1="24" x2="195" y2="24" stroke="#00f2fe" stroke-opacity="0.25" stroke-width="1"/>
 
-    <!-- Terminal Prompt & Commands -->
-    <text x="12" y="39" fill="#e2e8f0" font-size="9.5" font-weight="600" class="mono">C:\Users\Ritesh&gt; whoami</text>
+    <!-- Terminal Prompt & Details with Text Stroke Highlights -->
+    <text x="12" y="39" fill="#f8fafc" stroke="#040814" stroke-width="1.5" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono">C:\Users\Ritesh&gt; whoami</text>
     
-    <text x="12" y="55" fill="#38bdf8" font-size="9" class="mono">&gt; Systems Engineer</text>
-    <text x="12" y="69" fill="#00f2fe" font-size="9" class="mono">&gt; Applied AI &amp; RAG</text>
-    <text x="12" y="83" fill="#38bdf8" font-size="9" class="mono">&gt; C++ Low-Latency Core</text>
-    <text x="12" y="97" fill="#67e8f9" font-size="9" class="mono">&gt; SIH 2026 Innovator</text>
-    <text x="12" y="111" fill="#38bdf8" font-size="9" class="mono">&gt; Always Building...</text>
+    <text x="12" y="55" fill="#38bdf8" stroke="#040814" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="600" class="mono">&gt; Systems Engineer</text>
+    <text x="12" y="69" fill="#00f2fe" stroke="#040814" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="600" class="mono">&gt; Applied AI &amp; RAG</text>
+    <text x="12" y="83" fill="#38bdf8" stroke="#040814" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="600" class="mono">&gt; C++ Low-Latency Core</text>
+    <text x="12" y="97" fill="#67e8f9" stroke="#040814" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="600" class="mono">&gt; SIH 2026 Innovator</text>
+    <text x="12" y="111" fill="#38bdf8" stroke="#040814" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="600" class="mono">&gt; Always Building...</text>
     
-    <!-- Blinking Cursor Line -->
-    <rect x="12" y="121" width="10" height="2" fill="#00f2fe" class="cursor"/>
+    <!-- Blinking Cursor -->
+    <rect x="12" y="122" width="10" height="2" fill="#00f2fe" class="cursor"/>
   </g>
 
-  <!-- ================= LEFT: "Ideas into Reality" & MOTTO ================= -->
-  <!-- "Ideas into Reality" Handwritten Script with flourish -->
-  <g transform="translate(38, 225) rotate(-10)">
-    <text x="0" y="0" fill="#f8fafc" font-size="28" font-weight="700" class="script" font-style="italic" filter="url(#subtleGlow)">
-      Ideas
+  <!-- ================= LEFT: "Forge ideas into products" ================= -->
+  <!-- Slanted handwritten script with glowing stroke & underline flourish -->
+  <g transform="translate(36, 215) rotate(-9)">
+    <text x="0" y="0" fill="#f8fafc" stroke="#020612" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" font-size="25" font-weight="700" class="script-text" font-style="italic" filter="url(#subtleGlow)">
+      "Forge ideas
     </text>
-    <text x="18" y="24" fill="#38bdf8" font-size="22" font-weight="700" class="script" font-style="italic">
+    <text x="18" y="26" fill="#38bdf8" stroke="#020612" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" font-size="21" font-weight="700" class="script-text" font-style="italic">
       into
     </text>
-    <text x="5" y="52" fill="#ffffff" font-size="30" font-weight="700" class="script" font-style="italic" filter="url(#subtleGlow)">
-      Reality"
+    <text x="5" y="55" fill="#00f2fe" stroke="#020612" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" font-size="27" font-weight="700" class="script-text" font-style="italic" filter="url(#subtleGlow)">
+      products"
     </text>
     <!-- Cyan Flourish Underline -->
-    <path d="M 5 62 Q 55 68 85 58 Q 75 70 30 72 Z" fill="#00f2fe" filter="url(#subtleGlow)"/>
+    <path d="M 5 65 Q 65 74 120 62 Q 90 77 30 76 Z" fill="#00f2fe" filter="url(#subtleGlow)"/>
   </g>
 
-  <!-- Left Bottom Corner Philosophy -->
-  <g transform="translate(35, 335)">
-    <text x="0" y="14" fill="#94a3b8" font-size="9.5" font-weight="700" class="mono" letter-spacing="1.5">DISCIPLINE</text>
-    <text x="0" y="27" fill="#64748b" font-size="9.5" font-weight="700" class="mono" letter-spacing="1.5">CREATES</text>
-    <text x="0" y="40" fill="#38bdf8" font-size="9.5" font-weight="700" class="mono" letter-spacing="1.5">FREEDOM</text>
+  <!-- Bottom Left Philosophy -->
+  <g transform="translate(35, 338)">
+    <text x="0" y="14" fill="#94a3b8" stroke="#020612" stroke-width="1.5" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono" letter-spacing="1.5">DISCIPLINE</text>
+    <text x="0" y="27" fill="#64748b" stroke="#020612" stroke-width="1.5" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono" letter-spacing="1.5">CREATES</text>
+    <text x="0" y="40" fill="#00f2fe" stroke="#020612" stroke-width="1.5" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono" letter-spacing="1.5">FREEDOM</text>
   </g>
 
-  <!-- ================= CENTER-LEFT: THE STYLISH SIGNATURE HERO ================= -->
+  <!-- ================= CENTER-LEFT: THE SIGNATURE HERO "Ritesh Rana" ================= -->
   <g transform="translate(255, 60)">
 
-    <!-- 1. STYLISH HANDWRITTEN SIGNATURE: "Ritesh" (Angled cursive brush script) -->
-    <!-- Custom Vector Hand-Drawn Flowing Flourish Accent Behind "Ritesh" -->
-    <path d="M -15 80 C 15 20, 60 10, 110 40 C 160 70, 210 20, 270 45" fill="none" stroke="#00f2fe" stroke-width="2.5" stroke-opacity="0.3" stroke-linecap="round"/>
+    <!-- Background Calligraphic Swoosh Wave -->
+    <path d="M -20 85 C 30 15, 90 5, 160 35 C 230 65, 300 15, 390 40" fill="none" stroke="#00f2fe" stroke-width="3" stroke-opacity="0.35" stroke-linecap="round"/>
 
-    <!-- The Cursive "Ritesh" Signature with Glowing Cyan Gradient -->
-    <g transform="rotate(-8)">
-      <!-- Main Signature Calligraphy Text -->
-      <text x="10" y="70" fill="url(#cyanGlowGrad)" font-size="76" font-weight="700" class="script" letter-spacing="1" filter="url(#neonCyan)">
-        Ritesh
-      </text>
-      <!-- Double-stroke for ultra-vibrant neon effect -->
-      <text x="10" y="70" fill="#ffffff" font-size="76" font-weight="700" class="script" letter-spacing="1" fill-opacity="0.95">
-        Ritesh
-      </text>
-    </g>
-
-    <!-- 2. MODERN SANS ALL-CAPS: "RANA" (Matching "SINGHA ROY" in reference) -->
-    <g transform="translate(18, 120)">
-      <text x="0" y="0" fill="#ffffff" font-size="44" font-weight="900" class="sans" letter-spacing="6" filter="url(#subtleGlow)">
-        RANA
-      </text>
+    <!-- ================= STYLISH SIGNATURE: Ritesh Rana ================= -->
+    <!-- Both 'Ritesh' and 'Rana' fully styled in slanted flowing cursive with high-definition stroke highlight -->
+    <g transform="rotate(-6)">
       
-      <!-- Cyan Accents on "RANA" letters & Underline Swoosh -->
-      <path d="M 0 12 Q 130 18 240 10 Q 180 20 60 18 Z" fill="#00f2fe" filter="url(#subtleGlow)"/>
+      <!-- LAYER 1: Deep Black Outline for Ultra-High Contrast against glow & background -->
+      <text x="10" y="78" fill="none" stroke="#02050e" stroke-width="8" stroke-linejoin="round" class="signature" font-size="78" font-weight="700" letter-spacing="1.5">
+        Ritesh Rana
+      </text>
+
+      <!-- LAYER 2: Vibrant Electric Cyan Neon Glow Stroke -->
+      <text x="10" y="78" fill="none" stroke="#00f2fe" stroke-width="3.5" stroke-linejoin="round" class="signature" font-size="78" font-weight="700" letter-spacing="1.5" filter="url(#neonCyanGlow)">
+        Ritesh Rana
+      </text>
+
+      <!-- LAYER 3: Pure Brilliant Gradient Core Fill with Crisp Border -->
+      <text x="10" y="78" fill="url(#signatureGrad)" stroke="#00e5ff" stroke-width="0.8" class="signature" font-size="78" font-weight="700" letter-spacing="1.5">
+        Ritesh Rana
+      </text>
+
+      <!-- Signature Calligraphic Underline Flourish extending under both names -->
+      <path d="M 12 92 C 90 98, 220 102, 340 85 C 280 104, 150 106, 35 98 Z" fill="#00f2fe" filter="url(#subtleGlow)"/>
+      <path d="M 320 88 Q 365 82 390 92 Q 355 93 330 90 Z" fill="#38bdf8"/>
     </g>
 
-    <!-- 3. QUOTE IN SCRIPT BESIDE THE NAME (Like "This too shall pass" in the reference) -->
-    <g transform="translate(255, 65) rotate(-6)">
-      <text x="0" y="0" fill="#67e8f9" font-size="20" font-weight="600" class="script" font-style="italic">
-        "This too
+    <!-- Handwritten Dev Quote beside the signature -->
+    <g transform="translate(385, 48) rotate(-5)">
+      <text x="0" y="0" fill="#67e8f9" stroke="#020612" stroke-width="1.8" paint-order="stroke fill" font-size="18" font-weight="700" class="script-text" font-style="italic">
+        "Building without
       </text>
-      <text x="15" y="20" fill="#e0f2fe" font-size="22" font-weight="700" class="script" font-style="italic" filter="url(#subtleGlow)">
-        shall pass"
+      <text x="15" y="19" fill="#f8fafc" stroke="#020612" stroke-width="1.8" paint-order="stroke fill" font-size="20" font-weight="700" class="script-text" font-style="italic" filter="url(#subtleGlow)">
+        compromise"
       </text>
-      <!-- Small quote flourish -->
-      <path d="M 5 28 Q 45 34 75 26" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Flourish under quote -->
+      <path d="M 5 26 Q 50 32 85 24" fill="none" stroke="#00f2fe" stroke-width="1.5" stroke-linecap="round"/>
     </g>
 
-    <!-- 4. SUBTITLE ROLE BAR -->
-    <g transform="translate(18, 148)">
-      <text x="0" y="0" fill="#94a3b8" font-size="11.5" font-weight="600" class="sans" letter-spacing="1.5">
+    <!-- Subtitle Role Bar with Crisp Stroke Highlights -->
+    <g transform="translate(18, 146)">
+      <text x="0" y="0" fill="#f1f5f9" stroke="#02050e" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" font-size="11.5" font-weight="800" class="sans" letter-spacing="1.8">
         SYSTEMS ENGINEER <tspan fill="#00f2fe">|</tspan> APPLIED AI ARCHITECT <tspan fill="#00f2fe">|</tspan> SIH 2026 INNOVATOR
       </text>
     </g>
 
-    <!-- 5. SOCIAL CONNECT PILL BUTTONS (Matching the 3 cards in reference) -->
+    <!-- 3 Social Connect Capsule Cards -->
     <g transform="translate(18, 168)">
       <!-- Card 1: GitHub -->
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="112" height="38" rx="8" fill="#070e1e" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
-        <!-- GitHub Octocat Icon -->
+        <rect x="0" y="0" width="112" height="38" rx="8" fill="#060d1c" stroke="#00f2fe" stroke-opacity="0.5" stroke-width="1"/>
         <path d="M 18 19 C 18 14 22 10 27 10 C 32 10 36 14 36 19 C 36 23 33 26 30 27.5 L 30 25 C 30 24 29 23.5 28 23.5 C 31 23 32.5 21.5 32.5 19 C 32.5 17.5 32 16.5 31.5 15.8 C 31.8 15 31.7 13.8 31.3 13 C 31.3 13 30.2 12.7 28 14.2 C 27 13.9 26 13.8 25 13.8 C 24 13.8 23 13.9 22 14.2 C 19.8 12.7 18.7 13 18.7 13 C 18.3 13.8 18.2 15 18.5 15.8 C 18 16.5 17.5 17.5 17.5 19 C 17.5 21.5 19 23 22 23.5 C 21.2 23.9 20.8 24.6 20.8 25.5 L 20.8 27.5 C 19 26.5 18 23 18 19 Z" fill="#00f2fe"/>
-        <text x="44" y="18" fill="#ffffff" font-size="10.5" font-weight="700" class="sans">rrxcore</text>
-        <text x="44" y="29" fill="#64748b" font-size="8" font-weight="600" class="mono" letter-spacing="1">CODE</text>
+        <text x="44" y="18" fill="#ffffff" stroke="#030712" stroke-width="1.2" paint-order="stroke fill" font-size="10.5" font-weight="800" class="sans">rrxcore</text>
+        <text x="44" y="29" fill="#38bdf8" font-size="8" font-weight="700" class="mono" letter-spacing="1">CODE</text>
       </g>
 
       <!-- Card 2: LinkedIn -->
       <g transform="translate(122, 0)">
-        <rect x="0" y="0" width="138" height="38" rx="8" fill="#070e1e" stroke="#0077b5" stroke-opacity="0.5" stroke-width="1"/>
-        <!-- LinkedIn 'in' Icon Box -->
+        <rect x="0" y="0" width="138" height="38" rx="8" fill="#060d1c" stroke="#0077b5" stroke-opacity="0.6" stroke-width="1"/>
         <rect x="12" y="10" width="18" height="18" rx="4" fill="#0077b5"/>
         <text x="21" y="23" fill="#ffffff" font-size="11" font-weight="800" text-anchor="middle" class="sans">in</text>
-        <text x="37" y="18" fill="#ffffff" font-size="10.5" font-weight="700" class="sans">Ritesh Rana</text>
-        <text x="37" y="29" fill="#64748b" font-size="8" font-weight="600" class="mono" letter-spacing="1">CONNECT</text>
+        <text x="37" y="18" fill="#ffffff" stroke="#030712" stroke-width="1.2" paint-order="stroke fill" font-size="10.5" font-weight="800" class="sans">Ritesh Rana</text>
+        <text x="37" y="29" fill="#38bdf8" font-size="8" font-weight="700" class="mono" letter-spacing="1">CONNECT</text>
       </g>
 
       <!-- Card 3: Email / Direct Contact -->
       <g transform="translate(270, 0)">
-        <rect x="0" y="0" width="128" height="38" rx="8" fill="#070e1e" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
-        <!-- Mail Envelope Icon -->
+        <rect x="0" y="0" width="128" height="38" rx="8" fill="#060d1c" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1"/>
         <g transform="translate(12, 11)">
           <rect x="0" y="0" width="18" height="15" rx="2" fill="none" stroke="#38bdf8" stroke-width="1.4"/>
           <path d="M 1 2 L 9 8 L 17 2" fill="none" stroke="#38bdf8" stroke-width="1.3"/>
         </g>
-        <text x="37" y="18" fill="#ffffff" font-size="10.5" font-weight="700" class="sans">Contact Me</text>
-        <text x="37" y="29" fill="#64748b" font-size="8" font-weight="600" class="mono" letter-spacing="1">DIRECT</text>
+        <text x="37" y="18" fill="#ffffff" stroke="#030712" stroke-width="1.2" paint-order="stroke fill" font-size="10.5" font-weight="800" class="sans">Contact Me</text>
+        <text x="37" y="29" fill="#38bdf8" font-size="8" font-weight="700" class="mono" letter-spacing="1">DIRECT</text>
       </g>
     </g>
 
-    <!-- 6. TECH STACK ICONS ROW (Matching the circular icon row in reference) -->
+    <!-- Tech Stack Icons Row -->
     <g transform="translate(18, 232)">
       <!-- Tech 1: Python -->
       <g transform="translate(0, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1.2"/>
         <text x="16" y="21" fill="#38bdf8" font-size="13" text-anchor="middle">🐍</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">PYTHON</text>
+        <text x="16" y="42" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">PYTHON</text>
       </g>
 
       <!-- Tech 2: C++ -->
       <g transform="translate(56, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#00f2fe" stroke-opacity="0.6" stroke-width="1.2"/>
         <text x="16" y="20" fill="#00f2fe" font-size="10" font-weight="900" text-anchor="middle" class="mono">C++</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">C++20</text>
+        <text x="16" y="42" fill="#00f2fe" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">C++20</text>
       </g>
 
       <!-- Tech 3: React -->
       <g transform="translate(112, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#61dafb" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#61dafb" stroke-opacity="0.5" stroke-width="1.2"/>
         <text x="16" y="21" fill="#61dafb" font-size="13" text-anchor="middle">⚛️</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">REACT</text>
+        <text x="16" y="42" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">REACT</text>
       </g>
 
-      <!-- Tech 4: FastAPI / API -->
+      <!-- Tech 4: FastAPI -->
       <g transform="translate(168, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#009688" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#009688" stroke-opacity="0.5" stroke-width="1.2"/>
         <text x="16" y="21" fill="#009688" font-size="13" text-anchor="middle">⚡</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">FASTAPI</text>
+        <text x="16" y="42" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">FASTAPI</text>
       </g>
 
       <!-- Tech 5: MongoDB -->
       <g transform="translate(224, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#10b981" stroke-opacity="0.5" stroke-width="1.2"/>
         <text x="16" y="21" fill="#10b981" font-size="13" text-anchor="middle">🍃</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">MONGODB</text>
+        <text x="16" y="42" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">MONGODB</text>
       </g>
 
-      <!-- Tech 6: WebCrypto / Security -->
+      <!-- Tech 6: Crypto -->
       <g transform="translate(280, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#8b5cf6" stroke-opacity="0.6" stroke-width="1.2"/>
         <text x="16" y="21" fill="#8b5cf6" font-size="13" text-anchor="middle">🛡️</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">CRYPTO</text>
+        <text x="16" y="42" fill="#a78bfa" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">CRYPTO</text>
       </g>
 
       <!-- Tech 7: Git -->
       <g transform="translate(336, 0)">
-        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#f05032" stroke-opacity="0.4" stroke-width="1"/>
+        <circle cx="16" cy="16" r="15" fill="#0b162c" stroke="#f05032" stroke-opacity="0.5" stroke-width="1.2"/>
         <text x="16" y="21" fill="#f05032" font-size="13" text-anchor="middle">🐙</text>
-        <text x="16" y="42" fill="#94a3b8" font-size="8" font-weight="600" text-anchor="middle" class="mono">GIT</text>
+        <text x="16" y="42" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="8" font-weight="700" text-anchor="middle" class="mono">GIT</text>
       </g>
     </g>
 
-    <!-- Bottom Tagline -->
+    <!-- Bottom Tagline with Crisp Stroke -->
     <g transform="translate(18, 304)">
-      <text x="180" y="0" text-anchor="middle" fill="#64748b" font-size="9" font-weight="700" class="mono" letter-spacing="3">
+      <text x="180" y="0" text-anchor="middle" fill="#94a3b8" stroke="#020612" stroke-width="1.8" paint-order="stroke fill" font-size="9.5" font-weight="800" class="mono" letter-spacing="3">
         TECH <tspan fill="#00f2fe">•</tspan> SYSTEMS <tspan fill="#00f2fe">•</tspan> IMPACT
       </text>
     </g>
-
   </g>
 
-  <!-- ================= RIGHT: BATTLE-STATION DESK & DEVELOPER SETUP ================= -->
-  <!-- Wooden / Matte Workstation Desk Edge across bottom right -->
-  <path d="M 680 345 L 1200 345 L 1200 400 L 680 400 Z" fill="url(#deskGrad)"/>
-  <line x1="680" y1="345" x2="1200" y2="345" stroke="#3b2d24" stroke-width="1.5"/>
+  <!-- ================= RIGHT: ORIGINAL SYSTEMS & CRYPTO TELEMETRY HUD ================= -->
+  <!-- (Clean, futuristic developer battle-station replacing the generic tea cup and books!) -->
 
-  <!-- 1. Secondary Monitor (Right Background, with mountain art & quote) -->
-  <g transform="translate(930, 125)">
-    <!-- Monitor Bezel -->
-    <rect x="0" y="0" width="180" height="120" rx="6" fill="#080c14" stroke="#1e293b" stroke-width="2"/>
-    <!-- Screen Glass -->
-    <rect x="5" y="5" width="170" height="110" rx="3" fill="#040810"/>
-    <!-- Mountain illustration inside screen -->
-    <path d="M 5 95 Q 45 60 90 75 Q 130 50 175 85 L 175 115 L 5 115 Z" fill="#0f1f38"/>
-    <!-- Quote on monitor screen -->
-    <text x="90" y="42" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="600" class="script" font-style="italic">Same Student</text>
-    <text x="90" y="58" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="700" class="script" font-style="italic">Different</text>
-    <text x="90" y="74" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700" class="script" font-style="italic">Mindset.</text>
-    <!-- Stand -->
-    <rect x="85" y="120" width="10" height="30" fill="#1e293b"/>
-    <ellipse cx="90" cy="150" rx="28" ry="4" fill="#0f172a"/>
-  </g>
-
-  <!-- 2. Primary Developer Laptop (Open on Desk) -->
-  <g transform="translate(860, 245)">
-    <!-- Laptop Display Lid (tilted forward view) -->
-    <polygon points="15,0 185,0 200,90 0,90" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-    <polygon points="20,5 180,5 194,85 6,85" fill="#070a10"/>
+  <!-- 1. Real-Time Audio DSP Waveform / FFT Spectrum Analyzer (WASAPI C++ Engine) -->
+  <g transform="translate(710, 195)">
+    <!-- HUD Box Frame -->
+    <rect x="0" y="0" width="225" height="135" rx="8" fill="#050a16" fill-opacity="0.85" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1.2" filter="url(#subtleGlow)"/>
     
-    <!-- "Just a Developer" Glowing Script on Laptop Lid -->
-    <text x="75" y="46" text-anchor="middle" fill="#38bdf8" font-size="17" font-weight="700" class="script" font-style="italic" filter="url(#subtleGlow)">
-      Just
-    </text>
-    <text x="75" y="66" text-anchor="middle" fill="#00f2fe" font-size="19" font-weight="700" class="script" font-style="italic" filter="url(#neonCyan)">
-      a Developer
-    </text>
+    <!-- HUD Header -->
+    <rect x="0" y="0" width="225" height="24" rx="8" fill="#0b1426"/>
+    <circle cx="12" cy="12" r="3" fill="#00ff88" filter="url(#subtleGlow)"/>
+    <text x="22" y="16" fill="#38bdf8" stroke="#030712" stroke-width="1" paint-order="stroke fill" font-size="9" font-weight="700" class="mono">⚡ WASAPI CORE // LATENCY &lt;15ms</text>
+    
+    <!-- FFT Spectrum Bars (Representing real-time audio DSP) -->
+    <g transform="translate(15, 80)">
+      <rect x="0" y="-12" width="6" height="22" rx="2" fill="url(#fftGrad)"/>
+      <rect x="10" y="-28" width="6" height="38" rx="2" fill="url(#fftGrad)"/>
+      <rect x="20" y="-38" width="6" height="48" rx="2" fill="url(#fftGrad)"/>
+      <rect x="30" y="-22" width="6" height="32" rx="2" fill="url(#fftGrad)"/>
+      <rect x="40" y="-45" width="6" height="55" rx="2" fill="url(#fftGrad)"/>
+      <rect x="50" y="-35" width="6" height="45" rx="2" fill="url(#fftGrad)"/>
+      <rect x="60" y="-50" width="6" height="60" rx="2" fill="url(#fftGrad)"/>
+      <rect x="70" y="-32" width="6" height="42" rx="2" fill="url(#fftGrad)"/>
+      <rect x="80" y="-20" width="6" height="30" rx="2" fill="url(#fftGrad)"/>
+      <rect x="90" y="-40" width="6" height="50" rx="2" fill="url(#fftGrad)"/>
+      <rect x="100" y="-25" width="6" height="35" rx="2" fill="url(#fftGrad)"/>
+      <rect x="110" y="-15" width="6" height="25" rx="2" fill="url(#fftGrad)"/>
+      <rect x="120" y="-30" width="6" height="40" rx="2" fill="url(#fftGrad)"/>
+      <rect x="130" y="-42" width="6" height="52" rx="2" fill="url(#fftGrad)"/>
+      <rect x="140" y="-20" width="6" height="30" rx="2" fill="url(#fftGrad)"/>
+      <rect x="150" y="-35" width="6" height="45" rx="2" fill="url(#fftGrad)"/>
+      <rect x="160" y="-18" width="6" height="28" rx="2" fill="url(#fftGrad)"/>
+      <rect x="170" y="-10" width="6" height="20" rx="2" fill="url(#fftGrad)"/>
+      <rect x="180" y="-25" width="6" height="35" rx="2" fill="url(#fftGrad)"/>
+    </g>
 
-    <!-- Side code actions on laptop -->
-    <text x="155" y="32" text-anchor="end" fill="#94a3b8" font-size="7.5" font-weight="600" class="mono">Code</text>
-    <text x="155" y="44" text-anchor="end" fill="#94a3b8" font-size="7.5" font-weight="600" class="mono">Learn</text>
-    <text x="155" y="56" text-anchor="end" fill="#38bdf8" font-size="7.5" font-weight="600" class="mono">Create</text>
-    <text x="155" y="68" text-anchor="end" fill="#00f2fe" font-size="7.5" font-weight="600" class="mono">Repeat</text>
-
-    <!-- Laptop Base / Keyboard deck -->
-    <polygon points="0,90 200,90 220,105 -20,105" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <!-- Sub-labels on Audio HUD -->
+    <text x="14" y="112" fill="#94a3b8" stroke="#020612" stroke-width="1" paint-order="stroke fill" font-size="8.5" font-weight="600" class="mono">48kHz / 32-bit Float</text>
+    <text x="14" y="125" fill="#38bdf8" stroke="#020612" stroke-width="1" paint-order="stroke fill" font-size="8.5" font-weight="700" class="mono">Lock-Free SPSC Ring Buffers</text>
   </g>
 
-  <!-- 3. Stack of Hardcover Tech Books on Desk -->
-  <g transform="translate(710, 275)">
-    <!-- Book 1 (Bottom) -->
-    <rect x="0" y="54" width="125" height="15" rx="2" fill="#091427" stroke="#38bdf8" stroke-opacity="0.5" stroke-width="1"/>
-    <text x="8" y="65" fill="#93c5fd" font-size="7.5" font-weight="700" class="mono">Zero-Knowledge Crypto</text>
+  <!-- 2. Cryptographic Security Telemetry Console (CipherChat E2EE Core) -->
+  <g transform="translate(950, 150)">
+    <!-- Console Glass Frame -->
+    <rect x="0" y="0" width="215" height="180" rx="8" fill="#040914" fill-opacity="0.9" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1.2" filter="url(#subtleGlow)"/>
+    
+    <!-- Console Top Bar -->
+    <rect x="0" y="0" width="215" height="24" rx="8" fill="#0e1329"/>
+    <circle cx="12" cy="12" r="3" fill="#8b5cf6" filter="url(#subtleGlow)"/>
+    <text x="22" y="16" fill="#c084fc" stroke="#030712" stroke-width="1" paint-order="stroke fill" font-size="9" font-weight="700" class="mono">🔒 WEBCRYPTO E2EE ENGINE</text>
 
-    <!-- Book 2 -->
-    <rect x="3" y="38" width="120" height="15" rx="2" fill="#0f172a" stroke="#00f2fe" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="10" y="49" fill="#67e8f9" font-size="7.5" font-weight="700" class="mono">Low-Latency C++ WASAPI</text>
+    <!-- Security Badges & Specifications -->
+    <g transform="translate(14, 42)">
+      <text x="0" y="0" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono">CIPHER: <tspan fill="#34d399">AES-256-GCM</tspan></text>
+      <text x="0" y="18" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono">EXCHANGE: <tspan fill="#38bdf8">ECDH P-256</tspan></text>
+      <text x="0" y="36" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono">RELAY: <tspan fill="#f59e0b">Zero-Knowledge Blind</tspan></text>
+      <text x="0" y="54" fill="#e2e8f0" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9.5" font-weight="700" class="mono">FINGERPRINT: <tspan fill="#a78bfa">SHA-256 (60-Digit)</tspan></text>
+    </g>
 
-    <!-- Book 3 -->
-    <rect x="6" y="22" width="115" height="15" rx="2" fill="#091427" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
-    <text x="12" y="33" fill="#93c5fd" font-size="7.5" font-weight="700" class="mono">Statutory AI RAG Systems</text>
+    <!-- Glowing Divider -->
+    <line x1="14" y1="112" x2="201" y2="112" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1"/>
 
-    <!-- Book 4 (Top) -->
-    <rect x="9" y="6" width="110" height="15" rx="2" fill="#111c33" stroke="#00f2fe" stroke-opacity="0.6" stroke-width="1"/>
-    <text x="15" y="17" fill="#ffffff" font-size="7.5" font-weight="800" class="mono">Clean Systems &amp; Logic</text>
+    <!-- Developer Lid Script Quote on Right -->
+    <g transform="translate(107, 136)">
+      <text x="0" y="0" text-anchor="middle" fill="#f8fafc" stroke="#020612" stroke-width="2" paint-order="stroke fill" font-size="16" font-weight="700" class="script-text" font-style="italic" filter="url(#subtleGlow)">
+        "Code. Learn.
+      </text>
+      <text x="0" y="18" text-anchor="middle" fill="#00f2fe" stroke="#020612" stroke-width="2" paint-order="stroke fill" font-size="17" font-weight="700" class="script-text" font-style="italic" filter="url(#neonCyanGlow)">
+        Create. Repeat."
+      </text>
+    </g>
   </g>
 
-  <!-- 4. Developer Coffee Mug ("FUELED BY CURIOSITY") -->
-  <g transform="translate(825, 270)">
-    <!-- Mug Body -->
-    <rect x="0" y="15" width="38" height="42" rx="4" fill="#0a0f1d" stroke="#334155" stroke-width="1.2"/>
-    <!-- Mug Handle -->
-    <path d="M 38 23 C 48 23, 48 45, 38 45" fill="none" stroke="#334155" stroke-width="3"/>
-    <!-- Mug Label -->
-    <text x="19" y="30" text-anchor="middle" fill="#64748b" font-size="6" font-weight="700" class="mono">FUELED</text>
-    <text x="19" y="38" text-anchor="middle" fill="#64748b" font-size="6" font-weight="700" class="mono">BY</text>
-    <text x="19" y="47" text-anchor="middle" fill="#00f2fe" font-size="6" font-weight="800" class="mono">IDEAS ☕</text>
-    <!-- Steaming vapor -->
-    <path d="M 12 12 Q 10 5 15 0" fill="none" stroke="#94a3b8" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round"/>
-    <path d="M 22 12 Q 25 4 20 0" fill="none" stroke="#94a3b8" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round"/>
+  <!-- 3. Top Right Inspiring Quote Block with Stroke Highlights -->
+  <g transform="translate(1085, 36)">
+    <text x="0" y="0" text-anchor="end" fill="#ffffff" stroke="#020612" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" font-size="14" font-weight="900" class="mono" letter-spacing="2">GOOD</text>
+    <text x="0" y="18" text-anchor="end" fill="#00f2fe" stroke="#020612" stroke-width="2.5" stroke-linejoin="round" paint-order="stroke fill" font-size="14" font-weight="900" class="mono" letter-spacing="2">CODE</text>
+    <text x="0" y="36" text-anchor="end" fill="#93c5fd" stroke="#020612" stroke-width="2" paint-order="stroke fill" font-size="11" font-weight="800" class="mono" letter-spacing="1.5">BRIGHTER</text>
+    <text x="0" y="52" text-anchor="end" fill="#64748b" stroke="#020612" stroke-width="1.8" paint-order="stroke fill" font-size="11" font-weight="800" class="mono" letter-spacing="1.5">TOMORROWS</text>
   </g>
 
-  <!-- 5. Top Right Inspiring Quote Block -->
-  <g transform="translate(1070, 35)">
-    <text x="0" y="0" text-anchor="end" fill="#e2e8f0" font-size="14" font-weight="800" class="mono" letter-spacing="2">GOOD</text>
-    <text x="0" y="18" text-anchor="end" fill="#00f2fe" font-size="14" font-weight="800" class="mono" letter-spacing="2">CODE</text>
-    <text x="0" y="36" text-anchor="end" fill="#94a3b8" font-size="11" font-weight="700" class="mono" letter-spacing="1.5">BRIGHTER</text>
-    <text x="0" y="52" text-anchor="end" fill="#64748b" font-size="11" font-weight="700" class="mono" letter-spacing="1.5">TOMORROWS</text>
-  </g>
-
-  <!-- 6. Far Right Vertical Mission Strip -->
-  <g transform="translate(1160, 240)">
-    <text x="0" y="0" fill="#38bdf8" font-size="9" font-weight="800" class="mono" letter-spacing="2">LEARN</text>
-    <text x="0" y="14" fill="#00f2fe" font-size="9" font-weight="800" class="mono" letter-spacing="2">BUILD</text>
-    <text x="0" y="28" fill="#94a3b8" font-size="9" font-weight="800" class="mono" letter-spacing="2">SOLVE</text>
-    <text x="0" y="42" fill="#64748b" font-size="9" font-weight="800" class="mono" letter-spacing="2">GROW</text>
-    <text x="0" y="56" fill="#334155" font-size="9" font-weight="800" class="mono" letter-spacing="2">REPEAT</text>
+  <!-- 4. Far Right Vertical Mission Strip -->
+  <g transform="translate(1175, 240)">
+    <text x="0" y="0" fill="#38bdf8" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="800" class="mono" letter-spacing="2">LEARN</text>
+    <text x="0" y="14" fill="#00f2fe" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="800" class="mono" letter-spacing="2">BUILD</text>
+    <text x="0" y="28" fill="#94a3b8" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="800" class="mono" letter-spacing="2">SOLVE</text>
+    <text x="0" y="42" fill="#64748b" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="800" class="mono" letter-spacing="2">GROW</text>
+    <text x="0" y="56" fill="#334155" stroke="#020612" stroke-width="1.2" paint-order="stroke fill" font-size="9" font-weight="800" class="mono" letter-spacing="2">REPEAT</text>
   </g>
 
 </svg>
