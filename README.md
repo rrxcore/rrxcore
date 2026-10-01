@@ -21,6 +21,9 @@
   <a href="https://github.com/rrxcore">
     <img src="https://img.shields.io/badge/GitHub-rrxcore-00f2fe?style=for-the-badge&logo=github&logoColor=black" alt="GitHub" />
   </a>
+  <a href="https://www.linkedin.com/in/ritesh-rana-3187aa352/">
+    <img src="https://img.shields.io/badge/LinkedIn-Ritesh_Rana-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
   <a href="mailto:ranaritesh522@gmail.com">
     <img src="https://img.shields.io/badge/Email-ranaritesh522%40gmail.com-4facfe?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
@@ -236,6 +239,9 @@ Status: ⚡ Actively shipping & open to high-impact technical collaborations
 </p>
 
 <p align="center">
+  <a href="https://www.linkedin.com/in/ritesh-rana-3187aa352/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect_%40ritesh--rana-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
   <a href="mailto:ranaritesh522@gmail.com">
     <img src="https://img.shields.io/badge/Direct_Email-ranaritesh522%40gmail.com-00f2fe?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" />
   </a>
