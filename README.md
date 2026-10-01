@@ -9,7 +9,7 @@
 
 <!-- Dynamic Typing SVG Headline -->
 <a href="https://github.com/rrxcore">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=true&vCenter=true&random=false&width=900&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Rana+(%40rrxcore);Systems+Engineer+%26+Applied+AI+Architect;Architecting+Sub-15ms+C%2B%2B+Audio+Engines;Zero-Knowledge+End-to-End+Encryption;Smart+India+Hackathon+(SIH)+Innovator;Crafting+60+FPS+High-Performance+Web+Apps" alt="Typing Headline" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=false&vCenter=true&random=false&width=650&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Rana+(%40rrxcore);Systems+Engineer+%26+Applied+AI+Architect;Architecting+Sub-15ms+C%2B%2B+Audio+Engines;Zero-Knowledge+End-to-End+Encryption;Smart+India+Hackathon+(SIH)+Innovator;Crafting+60+FPS+High-Performance+Web+Apps" alt="Typing Headline" />
 </a>
 
 <p align="center">
