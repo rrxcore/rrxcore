@@ -7,9 +7,9 @@
 
 <br/><br/>
 
-<!-- Dynamic Typing SVG Headline -->
+<!-- Dynamic Typing SVG Headline (Self-Hosted & Centered) -->
 <a href="https://github.com/rrxcore">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00F2FE&center=false&vCenter=true&random=false&width=650&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Rana+(%40rrxcore);Systems+Engineer+%26+Applied+AI+Architect;Architecting+Sub-15ms+C%2B%2B+Audio+Engines;Zero-Knowledge+End-to-End+Encryption;Smart+India+Hackathon+(SIH)+Innovator;Crafting+60+FPS+High-Performance+Web+Apps" alt="Typing Headline" />
+  <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/typing.svg" alt="Typing Headline" width="100%" />
 </a>
 
 <p align="center">
@@ -268,3 +268,15 @@ Status: ⚡ Actively shipping & open to high-impact technical collaborations
 <p align="center">
   <sub>⚡ Designed with precision by <strong>Ritesh Rana (@rrxcore)</strong> • All Systems Operational</sub>
 </p>
+
+---
+
+### 🕹️ Retro Arcade // Pac-Man Zone
+
+<div align="center">
+  <p><em>Chomp through the maze • Level: SIH-2026 • 60 FPS Autonomous Vector Engine</em></p>
+  <a href="https://github.com/rrxcore">
+    <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/pacman.svg" alt="Ritesh Rana Pac-Man Arcade" width="100%" />
+  </a>
+</div>
+
