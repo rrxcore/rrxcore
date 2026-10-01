@@ -2,14 +2,14 @@
 
 <!-- Hero Banner -->
 <a href="https://github.com/rrxcore">
-  <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/banner.svg" alt="Rana / rrxcore Header Banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/banner.svg" alt="Ritesh Rana (@rrxcore) Header Banner" width="100%" />
 </a>
 
 <br/><br/>
 
 <!-- Dynamic Typing SVG Headline -->
 <a href="https://github.com/rrxcore">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=23&pause=1000&color=00F2FE&center=true&vCenter=true&random=false&width=750&lines=Hi+%F0%9F%91%8B%2C+I'm+Rana+(%40rrxcore);Systems+Engineer+%E2%80%A2+Applied+AI+Architect+%E2%80%A2+SIH+Innovator;Architecting+Sub-15ms+C%2B%2B+Audio+Engines;Building+Zero-Knowledge+End-to-End+Encryption;Crafting+60+FPS+High-Performance+Web+Architectures;Developing+Grounded+Statutory+Legal+RAG+Engines" alt="Typing Headline" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=23&pause=1000&color=00F2FE&center=true&vCenter=true&random=false&width=750&lines=Hi+%F0%9F%91%8B%2C+I'm+Ritesh+Rana+(%40rrxcore);Systems+Engineer+%E2%80%A2+Applied+AI+Architect+%E2%80%A2+SIH+Innovator;Architecting+Sub-15ms+C%2B%2B+Audio+Engines;Building+Zero-Knowledge+End-to-End+Encryption;Crafting+60+FPS+High-Performance+Web+Architectures;Developing+Grounded+Statutory+Legal+RAG+Engines" alt="Typing Headline" />
 </a>
 
 <p align="center">
@@ -254,5 +254,5 @@ Status: ⚡ Actively shipping & open to high-impact technical collaborations
 </p>
 
 <p align="center">
-  <sub>⚡ Designed with precision by <strong>Rana (@rrxcore)</strong> • All Systems Operational</sub>
+  <sub>⚡ Designed with precision by <strong>Ritesh Rana (@rrxcore)</strong> • All Systems Operational</sub>
 </p>
