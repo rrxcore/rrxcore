@@ -242,7 +242,7 @@ Status: ⚡ Actively shipping & open to collabs
 
 <!-- Top Languages Card -->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rrxcore&layout=compact&bg_color=06070c&title_color=00f2fe&text_color=94a3b8&border_color=1e293b" width="65%" alt="Most Used Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rrxcore&layout=compact&bg_color=06070c&title_color=00f2fe&text_color=94a3b8&border_color=1e293b&exclude_repo=MCU-FOXU-Multiverse-Hub,MCU-BY-RR-OLD" width="65%" alt="Most Used Languages" />
 </p>
 
 <!-- Dynamic Developer Quote Card -->
