@@ -52,122 +52,129 @@ I am a **Systems Engineer**, **Full-Stack Architect**, and **Applied AI Research
 
 ### 🛡️ Core Engineering Pillars
 
-```
-┌─────────────────────────────────┐   ┌─────────────────────────────────┐
-│ ⚡ LOW-LATENCY SYSTEMS           │   │ 🧠 APPLIED AI & STATUTORY RAG   │
-│ • C++ WASAPI Core (Sub-15ms)    │   │ • Hybrid BM25 + Dense Retrieval │
-│ • Lock-Free SPSC Ring Buffers   │   │ • Indian Patents Act (3p, 3e)   │
-│ • MMCSS Pro Audio Prioritization│   │ • NBA Form III & BDA Compliance │
-│ • SOLA Pitch & Formant DSP      │   │ • Zero-Hallucination Grounding  │
-└─────────────────────────────────┘   └─────────────────────────────────┘
-┌─────────────────────────────────┐   ┌─────────────────────────────────┐
-│ 🚀 EXTREME WEB PERFORMANCE      │   │ 🔐 ZERO-KNOWLEDGE CRYPTOGRAPHY  │
-│ • React 19 + TypeScript + Vite  │   │ • W3C WebCrypto SubtleCrypto    │
-│ • TanStack Virtualizer @ 60 FPS │   │ • Ephemeral ECDH P-256 Exchange │
-│ • 100,000+ Records in Memory    │   │ • AES-256-GCM + Blind Relay     │
-│ • 100% Zero-Server Telemetry    │   │ • E2EE Encrypted Live Voice     │
-└─────────────────────────────────┘   └─────────────────────────────────┘
-```
-
----
-
-### 🔬 Systems Architecture in Motion
-
 <p align="center">
-  <em>Self-drawing cryptographic data flow demonstrating the zero-knowledge client-side pipeline of CipherChat</em>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/architecture.svg" alt="Zero-Knowledge E2EE Architecture Pipeline" width="100%" />
+  <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/pillars.svg" alt="Core Engineering Pillars Architecture" width="100%" />
 </p>
 
 ---
 
 ### 🔥 Featured Flagship Innovations
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🔍 <a href="https://github.com/rrxcore/ChatLens">ChatLens</a></h3>
-      <p><strong>Ultra-Private, High-Performance WhatsApp Chat Reader &amp; Analytics Engine</strong></p>
-      <ul>
-        <li>⚡ <strong>Extreme Virtualization:</strong> Renders 100,000+ messages at a locked 60 FPS using TanStack Virtualizer and lazy burst computation.</li>
-        <li>🔒 <strong>Zero-Server Privacy:</strong> 100% client-side memory execution—zero servers, zero analytics, zero data transmission.</li>
-        <li>📖 <strong>Dual Reading Modes:</strong> Switch between iOS/Samsung-styled Chat Mode and prose-optimized Novel / Reader Mode.</li>
-        <li>📊 <strong>Deep Analytics:</strong> Sub-millisecond instant search, date-range filters, participant message breakdowns.</li>
-      </ul>
-      <p>
-        <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-        <img src="https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
-        <img src="https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white" />
-      </p>
-      <p>
-        <a href="https://github.com/rrxcore/ChatLens"><strong>View Repository ➔</strong></a> •
-        <a href="https://chatlens.vercel.app"><strong>Live Deployment ➔</strong></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🌿 <a href="https://github.com/rrxcore">IP-SAKTI Sahayak (powered by AYURIX)</a></h3>
-      <p><strong>SIH 2026 Flagship: Multilingual Statutory RAG Legal Engine for Ayurveda IPR</strong></p>
-      <ul>
-        <li>⚖️ <strong>Statutory Regulatory Defense:</strong> Codified across Indian Patents Act (Sections 3(p), 3(e), 3(d)), Biological Diversity Act (BDA 2002/2023), and NBA Form III mandatory approvals.</li>
-        <li>🌐 <strong>Global Regime Mapping:</strong> Automated alignment with WIPO 2024 Genetic Resources Treaty, US FDA Botanical Guidance, and EU EMA Directives.</li>
-        <li>🧠 <strong>Hybrid Citation RAG:</strong> Real-time statutory legal citation engine pairing BM25 lexical precision with dense vector embeddings to eliminate hallucinations.</li>
-      </ul>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/FastAPI_/_Flask-009688?style=flat-square&logo=fastapi&logoColor=white" />
-        <img src="https://img.shields.io/badge/RAG_Architecture-FF6F00?style=flat-square&logo=google-cloud&logoColor=white" />
-        <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
-      </p>
-      <p>
-        <a href="https://github.com/rrxcore"><strong>SIH 2026 Presentation &amp; Manuals ➔</strong></a>
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🎙️ <a href="https://github.com/rrxcore/Prototype-Experimenting-non-perfect-VoiceChangerPro-V2">VoiceChangerPro V2</a></h3>
-      <p><strong>Studio-Grade Low-Latency C++ WASAPI Real-Time Vocal Processing Engine</strong></p>
-      <ul>
-        <li>⚡ <strong>Sub-15ms Audio Loop:</strong> Built on Windows WASAPI running double-buffered 48kHz / 32-bit floating-point audio.</li>
-        <li>🔄 <strong>Lock-Free Concurrency:</strong> SPSC circular ring buffers guarantee zero memory allocation in the audio callback loop (zero pops/crackles).</li>
-        <li>🎛️ <strong>DSP Signal Pipeline:</strong> Phase-Locked SOLA pitch &amp; formant shifters, 80Hz high-pass filter, soft-knee noise gate, and peak limiter.</li>
-        <li>🎮 <strong>Gamer-Optimized:</strong> Elevates thread priority via Windows MMCSS ("Pro Audio") to prevent CPU starvation during 300+ FPS gameplay.</li>
-      </ul>
-      <p>
-        <img src="https://img.shields.io/badge/C++20-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" />
-        <img src="https://img.shields.io/badge/WASAPI-0078D6?style=flat-square&logo=windows&logoColor=white" />
-        <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white" />
-        <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" />
-      </p>
-      <p>
-        <a href="https://github.com/rrxcore/Prototype-Experimenting-non-perfect-VoiceChangerPro-V2"><strong>View Engine &amp; DSP Core ➔</strong></a>
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🔒 <a href="https://github.com/rrxcore/e2ee-cipherchat">CipherChat (E2EE)</a></h3>
-      <p><strong>Zero-Knowledge End-to-End Encrypted Messaging &amp; Live Voice Channels</strong></p>
-      <ul>
-        <li>🔑 <strong>W3C WebCrypto Security:</strong> Ephemeral ECDH P-256 key exchanges + HKDF-SHA256 session derivation + AES-256-GCM authenticated encryption.</li>
-        <li>🔊 <strong>E2EE Live Voice Channels:</strong> Discord-style encrypted voice rooms with real-time green glowing active speaker halos.</li>
-        <li>📡 <strong>Zero-Trust Blind Relay:</strong> Backend node server acts purely as a dumb packet relay holding zero private keys or plaintext data.</li>
-        <li>🛡️ <strong>MITM Prevention:</strong> Deterministic 60-digit safety fingerprint matrix computed directly from mutual public keys.</li>
-      </ul>
-      <p>
-        <img src="https://img.shields.io/badge/WebCrypto-8b5cf6?style=flat-square&logo=shield&logoColor=white" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
-        <img src="https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white" />
-      </p>
-      <p>
-        <a href="https://github.com/rrxcore/e2ee-cipherchat"><strong>View Repository ➔</strong></a> •
-        <a href="https://rrxcore.github.io/e2ee-cipherchat/"><strong>Live Web App ➔</strong></a>
-      </p>
-    </td>
-  </tr>
-</table>
+---
+
+#### 🔍 [ChatLens](https://github.com/rrxcore/ChatLens) — Ultra-Private WhatsApp Chat Reader & Analytics Engine
+
+<p>
+  <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite_6-646CFF?style=flat-square&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/TanStack_Virtual-FF4154?style=flat-square&logo=react-query&logoColor=white" />
+  <img src="https://img.shields.io/badge/Privacy-100%25_Zero--Server-10b981?style=flat-square&logo=shield&logoColor=white" />
+</p>
+
+* **Extreme Virtualization:** Renders **100,000+ messages at a locked 60 FPS** using TanStack Virtualizer with dynamic row-height cache and lazy burst execution.
+* **100% Zero-Server Privacy:** Pure client-side memory execution—zero API requests, zero cloud telemetry, and zero data leaving the browser.
+* **Dual Reading Modes:** Instant toggle between iOS/Samsung-styled Chat Bubbles and prose-optimized Novel / Reader Mode.
+* **Deep In-Memory Analytics:** Sub-millisecond instant search, date-range filtering, and participant activity metrics.
+
+<p align="center">
+  <em>ChatLens Client-Side 60 FPS Virtualization Pipeline</em>
+</p>
+<p align="center">
+  <a href="https://github.com/rrxcore/ChatLens">
+    <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/chatlens_arch.svg" alt="ChatLens 60 FPS Virtualization Architecture" width="100%" />
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/rrxcore/ChatLens"><strong>View Repository ➔</strong></a> •
+  <a href="https://chatlens.vercel.app"><strong>Live Web App ➔</strong></a>
+</p>
+
+---
+
+#### 🌿 [IP-SAKTI Sahayak (powered by AYURIX)](https://github.com/rrxcore) — SIH 2026 Flagship Multilingual Statutory RAG Legal Engine
+
+<p>
+  <img src="https://img.shields.io/badge/SIH_2026-Flagship_Project-10b981?style=flat-square&logo=target&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hybrid_RAG-FF6F00?style=flat-square&logo=google-cloud&logoColor=white" />
+  <img src="https://img.shields.io/badge/WIPO_2024-Treaty_Compliance-38bdf8?style=flat-square&logo=wipo&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+</p>
+
+* **Statutory Regulatory Defense:** Codified rules for Indian Patents Act (Sections 3(p), 3(e), 3(d)), Biological Diversity Act (BDA 2002/2023), and mandatory NBA Form III filings.
+* **Sanskrit-Latin Binomial Taxonomy:** Cross-maps classical Sanskrit treatises (Charaka & Sushruta Samhita) to modern botanical Latin binomial taxa.
+* **Dual-Lane Hybrid Citation RAG:** Pairs exact BM25 statutory lexical matching with dense semantic embeddings to enforce zero-hallucination legal grounding.
+* **Global Accord Alignment:** Pre-audited for the WIPO 2024 Genetic Resources and Associated Traditional Knowledge Treaty.
+
+<p align="center">
+  <em>IP-SAKTI Sahayak Statutory Ayurvedic IPR Defense Pipeline</em>
+</p>
+<p align="center">
+  <a href="https://github.com/rrxcore">
+    <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/ipsakti_arch.svg" alt="IP-SAKTI Sahayak Statutory Architecture" width="100%" />
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/rrxcore"><strong>SIH 2026 Presentation &amp; Manuals ➔</strong></a>
+</p>
+
+---
+
+#### 🔒 [CipherChat (E2EE)](https://github.com/rrxcore/e2ee-cipherchat) — Zero-Knowledge Cryptographic Messaging & Live Voice Channels
+
+<p>
+  <img src="https://img.shields.io/badge/W3C_WebCrypto-8b5cf6?style=flat-square&logo=shield&logoColor=white" />
+  <img src="https://img.shields.io/badge/AES--256--GCM-00f2fe?style=flat-square&logo=lock&logoColor=black" />
+  <img src="https://img.shields.io/badge/ECDH_P--256-38bdf8?style=flat-square&logo=key&logoColor=black" />
+  <img src="https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=socket.io&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
+</p>
+
+* **Hardware-Accelerated WebCrypto:** Ephemeral ECDH P-256 key exchanges, HKDF-SHA256 session derivation, and AES-256-GCM authenticated payload encryption.
+* **Encrypted Voice Channels:** Discord-style real-time voice rooms protected end-to-end with animated active speaker telemetry.
+* **Zero-Trust Blind Relay:** Server acts purely as a dumb network routing packet relay holding zero keys, zero passwords, and zero plaintext.
+* **Deterministic MITM Safety:** Real-time 60-digit safety fingerprint matrix computed directly from mutual public keys for instant tamper detection.
+
+<p align="center">
+  <em>CipherChat Zero-Knowledge End-to-End Cryptographic Data Flow</em>
+</p>
+<p align="center">
+  <a href="https://github.com/rrxcore/e2ee-cipherchat">
+    <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/architecture.svg" alt="Zero-Knowledge E2EE Architecture Pipeline" width="100%" />
+  </a>
+</p>
+
+<p>
+  <a href="https://github.com/rrxcore/e2ee-cipherchat"><strong>View Repository ➔</strong></a> •
+  <a href="https://rrxcore.github.io/e2ee-cipherchat/"><strong>Live Web App ➔</strong></a>
+</p>
+
+---
+
+#### 🎙️ [VoiceChangerPro V2](https://github.com/rrxcore/Prototype-Experimenting-non-perfect-VoiceChangerPro-V2) — Studio-Grade Low-Latency C++ WASAPI Real-Time Vocal Engine
+
+<p>
+  <img src="https://img.shields.io/badge/C++20-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/WASAPI-0078D6?style=flat-square&logo=windows&logoColor=white" />
+  <img src="https://img.shields.io/badge/CMake-064F8C?style=flat-square&logo=cmake&logoColor=white" />
+  <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" />
+</p>
+
+* **Sub-15ms Audio Loop:** Built on Windows WASAPI running double-buffered 48kHz / 32-bit floating-point audio pipelines.
+* **Lock-Free Concurrency:** SPSC circular ring buffers guarantee zero memory allocation in the hot audio callback loop, eliminating pop/crackle artifacts.
+* **DSP Signal Chain:** Phase-Locked Synchronous Overlap-Add (SOLA) pitch & formant shifters, 80Hz high-pass filter, soft-knee noise gate, and peak limiter.
+* **MMCSS Thread Scheduling:** Elevates OS thread priority via Windows MMCSS ("Pro Audio") to prevent CPU starvation during 300+ FPS competitive gaming.
+
+<p>
+  <a href="https://github.com/rrxcore/Prototype-Experimenting-non-perfect-VoiceChangerPro-V2"><strong>View Engine &amp; DSP Core ➔</strong></a>
+</p>
+
+---
 
 <details>
   <summary><strong>👉 Click to reveal more projects (Sudoku Constraint Solver, BetterDiscord Frosted Glass, etc.)</strong></summary>
@@ -209,13 +216,16 @@ I am a **Systems Engineer**, **Full-Stack Architect**, and **Applied AI Research
 rrxcore@workstation:~$ neofetch --engineer
 ```
 ```yaml
-Host: Rana (@rrxcore) - Systems & AI Engineer
-Workstation: Windows 11 Pro / Arch Linux / PowerShell Core
-Core Stack: C++20 WASAPI • React 19 • TypeScript • Python 3.12
-Specialization: Low-Latency Audio DSP • Zero-Knowledge E2EE • Grounded RAG
-Current Mission: Scaling High-Speed Legal/Statutory RAG Pipelines (SIH 2026)
-Engineering Rule: "Zero memory allocation in hot audio loops; zero plaintext on the wire."
-Status: ⚡ Actively shipping & open to high-impact technical collaborations
+Host: Rana (@rrxcore) [Systems & AI]
+OS: Windows 11 Pro • Arch Linux
+Stack: C++20 WASAPI • React 19 • Python
+Focus: Low-Latency Audio DSP
+       Zero-Knowledge E2EE Crypto
+       Statutory RAG Pipelines
+Mission: SIH 2026 Flagship (Legal IPR)
+Rule: "Zero allocation in audio loops;
+       Zero plaintext on the wire."
+Status: ⚡ Actively shipping & open to collabs
 ```
 
 ---
@@ -279,4 +289,3 @@ Status: ⚡ Actively shipping & open to high-impact technical collaborations
     <img src="https://raw.githubusercontent.com/rrxcore/rrxcore/main/assets/pacman.svg" alt="Ritesh Rana Pac-Man Arcade" width="100%" />
   </a>
 </div>
-

@@ -1,7 +1,6 @@
-preview.html
+generate_*.py
 build_banner.py
-generate_pacman.py
-generate_architecture.py
+preview.html
 assets/b64_portrait.txt
 .DS_Store
 Thumbs.db
